@@ -6,5 +6,52 @@ If you WERE to implement tests for your function, what cases would you test?
 List each case below in plain english with it's expected result. 
 
 For example...
+
 Case: user a views user b's recording x for the first time
 Expected Result: etc etc
+
+Case 1: User A views user B's recording X for the first time.
+Expected Result: Increment the uniqueRecordingViewCount for 
+user A by 1 and append the ID of recording X to the String Array, 
+then increment the uniqueViewCount for recording X by 1.
+
+Case 2: user A views user B's recording X for the second time
+Expected Result: no actions.
+
+Case 3: user A starts user B's recording X for the first time
+on multiple devices at the same moment.
+Expected Result: Increment the uniqueRecordingViewCount for 
+user A by 1 and append the ID of recording X to the String Array, 
+then increment the uniqueViewCount for recording X by 1.
+
+Case 4: User C views user B's recording X for the first time.
+Expected Result: Increment the uniqueRecordingViewCount for 
+user C by 1 and append the ID of recording X to the String Array, 
+then increment the uniqueViewCount for recording X by 1.
+
+Case 5: X number of unique users views user's A recording Z for
+the first time.
+Expected Result: Increment the uniqueRecordingViewCount for 
+all users by 1 and append the ID of recording Z to the String Array, 
+then increment the uniqueViewCount for recording Z by X.
+
+Case 6: User A views User B's recording A for the first time
+Expected Result: recordingA viewCount is now 1
+
+Case 7: User A views User B's recording A for the second time
+Expected Result: recordingA viewCount is now 1
+
+Case 8: User B views User A's recording B for the second time
+Expected Result: recordingB viewCount is now 1
+
+Case 9: User B views User A's recording NonExisting for the second time
+Expected Result: error, recording doesn't exist
+
+Case 10: User Q views User A's recording NonExisting for the second time
+Expected Result: error, viewer doesn't exist
+
+Case 11: User B views User B's recording A for the first time
+Expected Result: recordingA viewCount remains at 1
+
+Case 12: User B views User A's recording C for the first time
+Expected Result: User A's total recording view count is incremented to 2

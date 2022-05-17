@@ -56,3 +56,30 @@ export const recordingViews = functions.https.onRequest(async (request, response
     response.status(400).send("only OPTIONS or POST requests are allowed");
   }
 });
+
+// export const trackRecordingView = functions.https.onRequest(async, (request, response) => {
+//   // response.set
+//   //get id of user and video
+//   //go to document of video and user, update the view count of both
+//   let viewId = request.body.viewerId;
+//   let vidId = request.body.recordingId;
+
+//   // let viewCountRn = await trackRecordingView(recordingId);
+  
+
+//   admin
+//   .firestore()
+//   .collection("Recording")
+//   .where("uniqueViewCount", "==", vidId)
+//   .update({
+//     "uniqueViewCount": 
+//   })
+//   // .get()
+//   // .then((querySnap) => {
+//   //   querySnap.array.forEach(doc => { result.push(doc.data()));
+
+      
+//   //   });
+// });
+
+// export const retrieveViewCount
